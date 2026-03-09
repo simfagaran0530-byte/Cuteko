@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Question</title>
+
+<style>
+
+body{
+text-align:center;
+font-family:Arial;
+margin-top:120px;
+
+background-image:url("Jeyz.jpg");
+background-size: cover;
+background-position:center;
+background-repeat: no-repeat;
+background-attachment:fixed;
+}
+
+button{
+padding:10px 20px;
+font-size:18px;
+margin:10px;
+cursor:pointer;
+background-color: ##D3D3D3;
+}
+
+#no{
+position:absolute;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<h1>Pogi ba ako? 😎</h1>
+
+<button id="yes"  onclick="yes()">Yes</button>
+<button id="no" onclick="no()">No</button>
+
+<script>
+
+let size = 18; 
+
+function yes(){
+alert("Alam ko na eh 😎");
+}
+
+function no(){
+
+let x = Math.random() * (window.innerWidth - 100);
+let y = Math.random() * (window.innerHeight - 50);
+
+let noBtn = document.getElementById("no");
+noBtn.style.left = x + "px";
+noBtn.style.top = y + "px";
+
+size += 5;
+document.getElementById("yes").style.fontSize = size + "px";
+}
+
+</script>
+
+</body>
+</html>
